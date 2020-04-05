@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './footer'
 
 const ContactPage = () => {
     return (
@@ -6,6 +7,7 @@ const ContactPage = () => {
             <h1>Contact Us</h1>
             <p>Call us on 123456789</p>
             <button><a href="mailto:ashtontairua@gmail.com?Subject=Site%20Enquiry" target="_top">Contact Us Now</a></button>
+            <Footer />
         </div>
     )
 }
