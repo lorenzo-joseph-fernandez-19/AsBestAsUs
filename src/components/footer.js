@@ -2,7 +2,6 @@ import React from 'react'
 import LinkedIn from '../../public/images/LinkedIn.png'
 import Facebook from '../../public/images/Facebook.png'
 
-
 const Footer = () => {
     return (
         <footer>
