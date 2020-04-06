@@ -1,11 +1,11 @@
 import React from "react"
+import Layout from '../components/layout'
 
 const HomePage = () => {
     return (
-        <div> 
-            <h1>Asbestasus</h1>
-            <h2>Welcome to our website!</h2>
-        </div>
+        <Layout>
+            <h2>Welcome to our website!</h2> 
+        </Layout>
     )
 }
 
