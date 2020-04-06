@@ -1,14 +1,11 @@
 import React from "react"
-import Footer from '../components/footer'
-import Header from '../components/header'
+import Layout from '../components/layout'
 
 const HomePage = () => {
     return (
-        <div> 
-            <Header />
-            <h2>Welcome to our website!</h2>
-            <Footer />
-        </div>
+        <Layout>
+            <h2>Welcome to our website!</h2> 
+        </Layout>
     )
 }
 

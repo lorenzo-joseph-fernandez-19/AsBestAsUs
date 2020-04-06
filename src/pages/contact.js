@@ -1,16 +1,13 @@
 import React from 'react'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Layout from '../components/layout'
 
 const ContactPage = () => {
     return (
-        <div>
-            <Header />
+        <Layout>
             <h1>Contact Us</h1>
-            <p>Call us on 123456789</p>
+            <p>Call us on </p>
             <button><a href="mailto:ashtontairua@gmail.com?Subject=Site%20Enquiry" target="_top">Contact Us Now</a></button>
-            <Footer />
-        </div>
+        </Layout>
     )
 }
 
