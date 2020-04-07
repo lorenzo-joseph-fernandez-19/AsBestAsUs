@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Logo } from '../../public/images/Logo.jpg'
+import './header.scss'
 
 const Header = () => {
     return (

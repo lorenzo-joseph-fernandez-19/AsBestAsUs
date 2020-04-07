@@ -1,11 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     siteUrl: `https://www.example.com`,
   },
@@ -25,7 +18,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "http://localhost:8888/AsBestAsUs",
+        baseUrl: "localhost:8888/AsBestAsUs",
         protocol: "http",
         hostingWPCOM: false,
         // We will be using some advanced custom fields
@@ -55,5 +48,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sass`
   ],
 }
