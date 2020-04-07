@@ -3,8 +3,13 @@
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     padding: 1rem;
+    list-style: none;
 }
 
 .link:hover {
     color: #FDB813
+}
+
+.list {
+    list-style-type: none;
 }
