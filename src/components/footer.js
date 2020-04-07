@@ -1,13 +1,12 @@
 import React from 'react'
-// import LinkedIn from '../../public/images/LinkedIn.png'
-// import Facebook from '../../public/images/Facebook.png'
+import footerStyles from './footer.module.scss'
 
 const Footer = () => {
     return (
-        <footer>
-            <p>© 2020 AS-BEST-AS-US ASBESTOS REMOVALISTS AND DEMOLITIONS LIMITED</p>
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/conditions">Terms & Conditions</a>
+        <footer className={footerStyles.container}>
+            <p className={footerStyles.paragraph}>© 2020 AS-BEST-AS-US ASBESTOS REMOVALISTS AND DEMOLITIONS LIMITED</p>
+            <a href="/privacy" className={footerStyles.link}>Privacy Policy</a>
+            <a href="/conditions" className={footerStyles.link}>Terms & Conditions</a>
             {/* <a href="https://www.linkedin.com/in/fernandezlorenzo/" target="_blank"><img src={LinkedIn}></img></a>
             <a href="https://www.facebook.com" target="_blank"><img src={Facebook}></img></a> */}
         </footer>
