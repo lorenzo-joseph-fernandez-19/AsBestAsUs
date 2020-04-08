@@ -15,39 +15,41 @@ module.exports = {
         icon: `src/images/icon.png`
       },
     },
-//     {
-//       resolve: "gatsby-source-wordpress",
-//       options: {
-//         baseUrl: "localhost:8888/AsBestAsUs",
-//         protocol: "http",
-//         hostingWPCOM: false,
-//         // We will be using some advanced custom fields
-//         useACF: true,
-//         acfOptionPageIds: [],
-//         verboseOutput: false,
-//         perPage: 100,
-//         searchAndReplaceContentUrls: {
-//           sourceUrl: "http://localhost:8888/AsBestAsUs",
-//           replacementUrl: "http://localhost:8888/AsBestAsUs",
-//         },
-//         // Set how many simultaneous requests are sent at once.
-//         concurrentRequests: 10,
-//         includedRoutes: [
-//           "**/categories",
-//           "**/posts",
-//           "**/pages",
-//           "**/media",
-//           "**/tags",
-//           "**/taxonomies",
-//           "**/users",
-//         ],
-//         excludedRoutes: [],
-//         normalizer: function({ entities }) {
-//           return entities
-//         },
-//       },
-//     },
+    // {
+    //   resolve: "gatsby-source-wordpress",
+    //   options: {
+    //     baseUrl: "localhost:8888/AsBestAsUs",
+    //     protocol: "http",
+    //     hostingWPCOM: false,
+    //     // We will be using some advanced custom fields
+    //     useACF: true,
+    //     acfOptionPageIds: [],
+    //     verboseOutput: false,
+    //     perPage: 100,
+    //     searchAndReplaceContentUrls: {
+    //       sourceUrl: "http://localhost:8888/AsBestAsUs",
+    //       replacementUrl: "http://localhost:8888/AsBestAsUs",
+    //     },
+    //     // Set how many simultaneous requests are sent at once.
+    //     concurrentRequests: 10,
+    //     includedRoutes: [
+    //       "**/categories",
+    //       "**/posts",
+    //       "**/pages",
+    //       "**/media",
+    //       "**/tags",
+    //       "**/taxonomies",
+    //       "**/users",
+    //     ],
+    //     excludedRoutes: [],
+    //     normalizer: function({ entities }) {
+    //       return entities
+    //     },
+    //   },
+    // },
+
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`,
   ],
 }
