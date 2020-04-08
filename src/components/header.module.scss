@@ -1,9 +1,11 @@
 .link {
     color: #000000;
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    padding: 1rem;
-    list-style: none;
+    font-weight: medium;
+    padding: 1rem 0 3rem;
+    text-decoration: none;
+    font-size: .9rem;
+    margin-right: 1.3rem;
 }
 
 .link:hover {
@@ -11,5 +13,11 @@
 }
 
 .list {
+    display: flex;
     list-style-type: none;
+    margin: 0;
+}
+
+.active-list {
+    color: #FDB813;
 }

@@ -5,13 +5,16 @@ import headerStyles from './header.module.scss'
 const Header = () => {
     return (
         <header>
+            <Link to="/">
+            <img src={require('../images/logo.png')} alt="website logo"/>
+            </Link>
             <nav>
-                <ul>
-                    <li className={headerStyles.list}>
-                        <Link className={headerStyles.link} to="/">Home</Link>
-                        <Link className={headerStyles.link} to="/about">What we do</Link>
-                        <Link className={headerStyles.link} to="/news">News</Link>
-                        <Link className={headerStyles.link} to="/contact">Contact us</Link>
+                <ul className={headerStyles.list}>
+                    <li>
+                        <Link className={headerStyles.link} activeClassName={headerStyles.activeList} to="/">Home</Link>
+                        <Link className={headerStyles.link} activeClassName={headerStyles.activeList} to="/about">What we do</Link>
+                        <Link className={headerStyles.link} activeClassName={headerStyles.activeList} to="/news">News</Link>
+                        <Link className={headerStyles.link} activeClassName={headerStyles.activeList} to="/contact">Contact us</Link>
                     </li>
                 </ul>
             </nav>
