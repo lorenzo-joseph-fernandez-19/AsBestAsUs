@@ -1,17 +1,20 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Logo } from '../../public/images/Logo.jpg'
+import headerStyles from './header.module.scss'
 
 const Header = () => {
     return (
         <header>
+            <Link to="/">
+            <img src={require('../images/logo.png')} alt="website logo"/>
+            </Link>
             <nav>
-                <ul>
+                <ul className={headerStyles.list}>
                     <li>
-                        <Link to="/">Home</Link>
-                        <Link to="/about">What we do</Link>
-                        <Link to="/news">News</Link>
-                        <Link to="/contact">Contact us</Link>
+                        <Link className={headerStyles.link} activeClassName={headerStyles.activeList} to="/">Home</Link>
+                        <Link className={headerStyles.link} activeClassName={headerStyles.activeList} to="/about">What we do</Link>
+                        <Link className={headerStyles.link} activeClassName={headerStyles.activeList} to="/news">News</Link>
+                        <Link className={headerStyles.link} activeClassName={headerStyles.activeList} to="/contact">Contact us</Link>
                     </li>
                 </ul>
             </nav>
