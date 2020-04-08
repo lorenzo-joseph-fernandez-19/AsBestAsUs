@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import headerStyles from './header.module.scss'
+import Logo from '../images/logo.png'
 
 const Header = () => {
     return (
         <header>
             <Link to="/">
-            <img src={require('../images/logo.png')} alt="website logo"/>
+                <img src={Logo} alt="website logo"/>
             </Link>
             <nav>
                 <ul className={headerStyles.list}>
