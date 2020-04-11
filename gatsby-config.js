@@ -1,13 +1,18 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://www.asbestasus.com`,
+    title: 'AsBestAsUs Asbestos Removalists and Demolitions',
   },
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `AsBestAsUs`,
+        short_name: `AsBestAsUs`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
@@ -15,41 +20,16 @@ module.exports = {
         icon: `src/images/icon.png`
       },
     },
-    // {
-    //   resolve: "gatsby-source-wordpress",
-    //   options: {
-    //     baseUrl: "localhost:8888/AsBestAsUs",
-    //     protocol: "http",
-    //     hostingWPCOM: false,
-    //     // We will be using some advanced custom fields
-    //     useACF: true,
-    //     acfOptionPageIds: [],
-    //     verboseOutput: false,
-    //     perPage: 100,
-    //     searchAndReplaceContentUrls: {
-    //       sourceUrl: "http://localhost:8888/AsBestAsUs",
-    //       replacementUrl: "http://localhost:8888/AsBestAsUs",
-    //     },
-    //     // Set how many simultaneous requests are sent at once.
-    //     concurrentRequests: 10,
-    //     includedRoutes: [
-    //       "**/categories",
-    //       "**/posts",
-    //       "**/pages",
-    //       "**/media",
-    //       "**/tags",
-    //       "**/taxonomies",
-    //       "**/users",
-    //     ],
-    //     excludedRoutes: [],
-    //     normalizer: function({ entities }) {
-    //       return entities
-    //     },
-    //   },
-    // },
-
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+
   ],
 }
