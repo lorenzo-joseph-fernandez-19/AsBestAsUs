@@ -18,18 +18,46 @@ const BlogPage = () => {
             `)
     return (
         <Layout>
-            <h1>Blog</h1> 
-            <ol>{data.allContentfulBlogPost.edges.map((edge) => { 
+            <div className="container has-text-centered">
+                <h1 className="title is-1">News</h1> 
+                <ol className="tile is ancestor">{data.allContentfulBlogPost.edges.map((edge) => { 
                 return (
-                    <li>
-                        <Link to={`/news/${edge.node.slug}`}>
-                            <h2>{edge.node.title}</h2>
-                            <p>{edge.node.publishedDate}</p>
-                        </Link>
-                    </li>
+            //         <article className="title is-parent ">
+            //             <li className="tile is-child box">
+            //                 <Link to={`/news/${edge.node.slug}`}>
+            //                     <p className="title">{edge.node.title}</p>
+            //                     <p className="subtitle">{edge.node.publishedDate}</p>
+            //                     <img src={edge.node.image}></img>
+            //                 </Link>
+            //             </li>
+            //         </article>
+            //     )
+            // })}
+            <div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img alt="Placeholder image"/>
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">{edge.node.title}</p>
+        <p class="subtitle">{edge.node.authors}</p>
+      </div>
+    </div>
+
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus nec iaculis mauris. 
+      <time>{edge.node.publishedDate}</time>
+    </div>
+  </div>
+</div>
                 )
-            })}
-            </ol>
+})}
+                </ol>
+            </div>
         </Layout>
     )
 }

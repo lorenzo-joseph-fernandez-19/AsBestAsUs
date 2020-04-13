@@ -29,7 +29,7 @@ export default class Header extends React.Component {
   }
   render() {
     return (
-      <nav className="navbar is-fixed-top has-shadow is-transparent">
+      <nav className="navbar has-shadow is-transparent">
         <div className="container">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
@@ -46,6 +46,7 @@ export default class Header extends React.Component {
           <div className="navbar-end">
             <NavbarItem page="/" pagename="Home" />
             <NavbarItem page="/about" pagename="What we do" />
+            <NavbarItem page="/news" pagename="News" />
             <NavbarItem page="/contact" pagename="Contact Us"/>
           </div>
         </div>

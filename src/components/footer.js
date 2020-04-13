@@ -4,18 +4,14 @@ import { Link } from 'gatsby'
 
 const Footer = () => {
     return (
-        <footer className="hero-foot is-full">
-            <nav className="tabs">
-                <div className="container">
+        <footer className="footer is-primary">
+                <div className="content has-text-centered">
                     <p>© 2020 AS-BEST-AS-US ASBESTOS REMOVALISTS AND DEMOLITIONS LIMITED</p>
-                    <ul>
+                    <ul className="tabs">
                         <li><Link to="/privacy">Privacy Policy</Link></li>
                         <li><Link to="/conditions">Terms & Conditions</Link></li>
-                        <li><a href="www.facebook.com">Facebook</a></li>
-                        <li><a href="www.linkedin.com">LinkedIn</a></li>
                     </ul>
                 </div>
-            </nav>
         </footer>
     )
 }
