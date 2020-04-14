@@ -5,11 +5,10 @@ import "../styles/mystyles.scss"
 const AboutPage = () => {
     return (
         <Layout>
-            <div className="container has-text-centered">
+            <div className="section">
                 <h1 className="title">What we do</h1>
                 <h2 className="subtitle">We specialise in Asbestos Removal and Demolition.</h2>
             </div>
-            
         </Layout>
     )
 }
