@@ -2,33 +2,30 @@ import React from 'react'
 import { Link } from 'gatsby'
 import '../components/fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import "../styles/mystyles.scss"
 
 const Footer = () => {
     return (
-        <footer className="footer has-text-centered has-text-light has-background-black">
-            <div className="container ">
-            <p>© 2020 AS-BEST-AS-US ASBESTOS REMOVALISTS AND DEMOLITIONS LIMITED</p>
-                <div className="columns ">
-                    <div className="column">
-                        <div className="is-centered">
-                            <ul className>
-                                <li><Link className="has-text-light" to="/privacy">Privacy Policy</Link></li>
-                                <li><Link className="has-text-light" to="/conditions">Terms & Conditions</Link></li>
-                            </ul>
-                        </div>
+        <footer className="hero-footer section has-text-light has-background-black has-text-centered level">
+                    <div className="level-item">
+                    <p>© 2020 AS-BEST-AS-US ASBESTOS REMOVALISTS AND DEMOLITIONS LIMITED. </p>  
                     </div>
-                    <div class="column"></div>
-                    <div class="column">
+
+                    <div className="level-item">
+                            <p><Link className="has-text-light" to="/privacy">Privacy Policy</Link></p>
+                    </div>
+
+                    <div className="level-item">
+                            <p><Link className="has-text-light" to="/conditions">Terms & Conditions</Link></p>
+                    </div>
+
+                    <div class="level-item">
                             <a href="https://www.facebook.com" target="_blank">
-                                <FontAwesomeIcon className="icon is-large has-text-light" icon={['fab', 'facebook']} />
+                                <FontAwesomeIcon className="icon is-medium has-text-light" icon={['fab', 'facebook-f']} />
                             </a>
                             <a href="https://www.linkedin.com" target="_blank">
-                                <FontAwesomeIcon className="icon is-large has-text-light" icon={['fab', 'linkedin']} />
+                                <FontAwesomeIcon className="icon is-medium has-text-light" icon={['fab', 'linkedin']} />
                             </a>
                     </div>     
-                </div>
-            </div>
         </footer>
     )
 }
