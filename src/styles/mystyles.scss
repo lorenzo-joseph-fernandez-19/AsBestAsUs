@@ -11,21 +11,13 @@ $white: #FFFFFF;
 
 // Update Bulma's global variables
 $family-sans-serif: "Poppins", sans-serif;
-$grey-dark: $black;
-$grey-light: $black;
 $primary: $yellow;
 $link: $black;
 $link-hover: $yellow;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
-$container: $yellow;
-$hero-head: $yellow;
+$navbar-item-hover-color: $link $yellow;
 
-
-// Update some of Bulma's component variables
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
 
 
 

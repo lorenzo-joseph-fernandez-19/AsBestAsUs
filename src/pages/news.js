@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import Hero from '../images/asbestos2.jpeg'
 
 const BlogPage = () => {
     const data = useStaticQuery(graphql`
@@ -11,6 +12,9 @@ const BlogPage = () => {
                       title
                       slug
                       publishedDate(formatString: "MMMM Do, YYYY")
+                      body {
+                        json
+                      }
                     }
                   }
                 }
@@ -18,49 +22,49 @@ const BlogPage = () => {
             `)
     return (
         <Layout>
+          <div className="hero-body has-background-warning">
             <div className="container has-text-centered">
                 <h1 className="title is-1">News</h1> 
-                <ol className="tile is ancestor">{data.allContentfulBlogPost.edges.map((edge) => { 
+                <ol className="tile is-ancestor">{data.allContentfulBlogPost.edges.map((edge) => { 
                 return (
-            //         <article className="title is-parent ">
-            //             <li className="tile is-child box">
-            //                 <Link to={`/news/${edge.node.slug}`}>
-            //                     <p className="title">{edge.node.title}</p>
-            //                     <p className="subtitle">{edge.node.publishedDate}</p>
-            //                     <img src={edge.node.image}></img>
-            //                 </Link>
-            //             </li>
-            //         </article>
-            //     )
-            // })}
-            <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img alt="Placeholder image"/>
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-content">
-        <p class="title is-4">{edge.node.title}</p>
-        <p class="subtitle">{edge.node.authors}</p>
-      </div>
-    </div>
-
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. 
-      <time>{edge.node.publishedDate}</time>
-    </div>
-  </div>
-</div>
+                  <Link to={`/news/${edge.node.slug}`}>
+                    <article className="tile is-parent">
+                      <div className="tile is-child">
+                        <div class="card">
+                          <div class="card-image">
+                            <figure class="image is-4by3">
+                              <img src={Hero} alt={edge.node.title}/>
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-content">
+                                <p class="title has-text-centered is-5">{edge.node.title}</p>
+                                <p class="subtitle">{edge.node.authors}</p>
+                              </div>
+                            </div>
+                            <div class="content">
+                              <p>{edge.node.snippet}</p>
+                            </div>
+                            <footer class="card-footer">
+                              <p class="card-footer-item">
+                              <span>{edge.node.publishedDate}</span>
+                              </p>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </Link>
                 )
-})}
-                </ol>
+              })}
+              </ol>
             </div>
+          </div>
         </Layout>
     )
 }
 
 export default BlogPage
+
 

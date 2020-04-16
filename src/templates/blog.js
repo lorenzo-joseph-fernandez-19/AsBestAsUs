@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
+import Hero from '../images/asbestos4.jpeg'
 
 export const query = graphql`
   query($slug: String!) {
@@ -28,9 +29,14 @@ const Blog = props => {
 
   return (
     <Layout>
-      <h1>{props.data.contentfulBlogPost.title}</h1>
-      <p>{props.data.contentfulBlogPost.publishedDate}</p>
-      {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
+      <div className="hero-body section">
+        <h1 className="title is-1 has-text-centered">{props.data.contentfulBlogPost.title}</h1>
+          <p className="subtitle is-4 has-text-centered">{props.data.contentfulBlogPost.publishedDate}</p>
+        <div className="container">
+          <img src={Hero}></img>
+          <p>{documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}</p>
+        </div>
+      </div>
     </Layout>
   )
 }

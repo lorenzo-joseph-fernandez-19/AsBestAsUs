@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 const PrivacyPolicy = () => {
     return (
         <Layout>
-            <div className="container">
+            <div className="hero-body is-fullheight">
                 <div className="section">
                     <h1 className="title is-1">Privacy Policy for AsBestAsUs</h1>
                         <p>At AsBestAsUs, accessible from www.asbestasus.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by AsBestAsUs and how we use it.</p>
