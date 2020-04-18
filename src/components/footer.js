@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import '../components/fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -23,12 +24,12 @@ const Footer = () => {
             </div>
 
             <div class="level-item">
-                <a href="https://www.facebook.com" target="_blank">
+                <OutboundLink href="https://www.facebook.com" target="_blank">
                     <FontAwesomeIcon className="icon is-medium has-text-light" icon={['fab', 'facebook-square']} />
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
+                </OutboundLink>
+                <OutboundLink href="https://www.linkedin.com" target="_blank">
                     <FontAwesomeIcon className="icon is-medium has-text-light" icon={['fab', 'linkedin']} />
-                </a>
+                </OutboundLink>
             </div>     
         </footer>
     )

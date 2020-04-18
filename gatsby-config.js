@@ -9,6 +9,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-163938160-1",
+        head: true,
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `AsBestAsUs`,
@@ -30,6 +37,5 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-
   ],
 }
