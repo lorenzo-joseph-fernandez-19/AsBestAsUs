@@ -5,7 +5,7 @@ import "../styles/mystyles.scss"
 
 const HomePage = () => {
     return (
-        <Layout>
+        <Layout pageTitle="Home">
                 <section className="hero is-fullheight has-background-warning">
                     <div className="hero-body">
                         <div className="section">

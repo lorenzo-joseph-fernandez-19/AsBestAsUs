@@ -3,8 +3,8 @@ import Layout from '../components/layout'
 
 const Conditions = () => {
     return (
-        <Layout>
-            <div className="hero-body is-fullheight">
+        <Layout pageTitle="Terms & Conditions">
+            <div className="hero-body is-fullheight has-background-warning">
                 <div className="section">
                     <h2 className="title is-1"><strong>Terms and Conditions</strong></h2>
                         <p>Welcome to AsBestAsUs!</p>

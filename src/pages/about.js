@@ -5,7 +5,7 @@ import "../styles/mystyles.scss"
 
 const AboutPage = () => {
     return (
-        <Layout>
+        <Layout pageTitle="What we do">
             <div className="section">
                 <div className="columns">
                     <div className="column">

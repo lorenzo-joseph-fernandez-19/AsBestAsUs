@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ContactPage = () => {
     return (
-        <Layout>
+        <Layout pageTitle="Contact">
             <section className="section is-medium has-background-white">
             <div className="container">
                 <div className="columns">

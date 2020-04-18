@@ -28,7 +28,7 @@ const Blog = props => {
   }
 
   return (
-    <Layout>
+    <Layout pageTitle={props.data.contentfulBlogPost.title}>
       <div className="hero-body section">
         <h1 className="title is-1 has-text-centered">{props.data.contentfulBlogPost.title}</h1>
           <p className="subtitle is-4 has-text-centered">{props.data.contentfulBlogPost.publishedDate}</p>

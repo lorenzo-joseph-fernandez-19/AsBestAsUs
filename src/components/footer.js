@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer className="hero-footer section has-text-light has-background-black has-text-centered level">
             <div className="level-item">
-                <p>© 2020 AS-BEST-AS-US ASBESTOS REMOVALISTS AND DEMOLITIONS LIMITED. </p>  
+                <p>{`©{${new Date().getFullYear()} AS-BEST-AS-US ASBESTOS REMOVALISTS AND DEMOLITIONS LIMITED.`}</p>  
             </div>
 
             <div className="level-item">

@@ -1,18 +1,26 @@
 import React from 'react'
 import Header from './header'
 import Footer from './footer'
+import Helmet from "react-helmet"
 import "../styles/mystyles.scss"
 
-const Layout = (props) => {
-    return (
-        <div>
-            <div>
-                <Header />
-                {props.children}
-            </div>
-                <Footer />
-        </div>
-    )
-}
+const Layout = ({ pageTitle, children }) => (
+    <>
+      <Helmet>
+        <title>{`AsBestAsUs - Asbestos Removalists and Demolitions Specialists | ${pageTitle}`}</title>
+      </Helmet>
+      <div>
+        <Header>
+          <h1></h1>
+          <nav>
+            <ul>
+            </ul>
+          </nav>  
+        </Header>
+        {children}
+        <Footer />
+      </div>
+    </>
+  )
 
-export default Layout
+  export default Layout

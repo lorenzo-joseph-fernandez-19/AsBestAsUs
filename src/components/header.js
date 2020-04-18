@@ -4,7 +4,7 @@ import logo from '../images/Logo.svg'
 import headerStyles from './header.module.scss'
 
 const NavbarItem = props => (
-  <Link className="level-item is-capitalized" activeClassName={headerStyles.activeList} to={props.page}>
+  <Link className="level-item navbar-item is-capitalized" activeClassName={headerStyles.activeList} to={props.page}>
     {props.pagename}
   </Link>
 )

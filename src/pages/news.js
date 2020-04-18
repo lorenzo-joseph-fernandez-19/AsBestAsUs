@@ -21,7 +21,7 @@ const BlogPage = () => {
               }
             `)
     return (
-        <Layout>
+        <Layout pageTitle="News">
           <div className="hero-body has-background-warning">
             <div className="container has-text-centered">
                 <h1 className="title is-1">News</h1> 
