@@ -11,16 +11,76 @@ $white: #FFFFFF;
 
 // Update Bulma's global variables
 $family-sans-serif: "Poppins", sans-serif;
+$body-background-color: $white;
 $primary: $yellow;
-$link: $black;
+$link: $yellow;
 $link-hover: $yellow;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 $navbar-item-hover-color: $link $yellow;
+$family-primary: $family-sans-serif;
+$warning: $yellow;
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.link {
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    padding: 1rem 0 3rem;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-right: 1.3rem;
+}
 
+.link:hover {
+    color: #FDB813;
+}
 
+.line::after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FDB813;
+    transition: width .5s
+
+}
+
+.line:hover::after {
+    width: 100%;
+    transition: width .5s;
+}
+
+.list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.active-list {
+    color: #FDB813;
+    font-weight: bold;
+}
+
+.logo {
+    width: 168px;
+    height: 112px;
+    
+}
+
+.gradient-background {
+    display: flex;
+    // background: linear-gradient(90deg, rgba(253,233,19,0.9682247899159664) 0%, rgba(253,184,19,1) 100%);
+}
+
+.background-image {
+    background-image: url("../images/asbestos5.jpeg");
+    background-size: $fullhd-enabled;
+}
 
 // Import only what you need from Bulma
 @import "../../node_modules/bulma/sass/base/_all.sass";

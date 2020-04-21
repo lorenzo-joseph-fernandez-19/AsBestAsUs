@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../images/Logo.svg'
-import headerStyles from './header.module.scss'
+
 
 const NavbarItem = props => (
-  <Link className="level-item navbar-item is-capitalized" activeClassName={headerStyles.activeList} to={props.page}>
+  <Link className="link" activeClassName="active-list line" to={props.page}>
     {props.pagename}
   </Link>
 )
@@ -28,18 +28,16 @@ export default class Header extends React.Component {
   }
   render() {
     return (
-      <section className="hero-head section">
-        <nav className="level">
-          <div className="level-left">
+      <section className="hero-head section gradient-background level-left">
+        <nav className="level-item">
             <Link className to="/">
-              <img className={headerStyles.logo} src={logo} alt="AsBestAsUs Logo"/>
+              <img className="logo" src={logo} alt="AsBestAsUs Logo"/>
             </Link>
             <NavbarBurger active={this.state.activeMenu} toggleMenu={this.toggleMenu}/>
-          </div>
 
-          <div className="level">
-            <div className={`navbar-menu ${this.state.activeMenu ? 'is-active' : ''}`}>
-              <div className="level-item has-text-weight-semibold">
+          <div className="">
+            <div className={`navbar-menu navbar-start ${this.state.activeMenu ? 'is-active' : ''}`}>
+              <div className="navbar-item">
                 <NavbarItem page="/" pagename="Home" />
                 <NavbarItem page="/about" pagename="What we do" />
                 <NavbarItem page="/news" pagename="News" />
