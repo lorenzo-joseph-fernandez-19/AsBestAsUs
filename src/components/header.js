@@ -4,7 +4,7 @@ import logo from '../images/Logo.svg'
 
 
 const NavbarItem = props => (
-  <Link className="link" activeClassName="active-list line" to={props.page}>
+  <Link className="link line" activeClassName="active-list" to={props.page}>
     {props.pagename}
   </Link>
 )
@@ -28,16 +28,16 @@ export default class Header extends React.Component {
   }
   render() {
     return (
-      <section className="hero-head section gradient-background level-left">
-        <nav className="level-item">
+      <section className="hero section">
+        <nav className="level-left">
             <Link className to="/">
-              <img className="logo" src={logo} alt="AsBestAsUs Logo"/>
+              <img className="logo level-item" src={logo} alt="AsBestAsUs Logo"/>
             </Link>
             <NavbarBurger active={this.state.activeMenu} toggleMenu={this.toggleMenu}/>
 
           <div className="">
-            <div className={`navbar-menu navbar-start ${this.state.activeMenu ? 'is-active' : ''}`}>
-              <div className="navbar-item">
+            <div className={`navbar-menu ${this.state.activeMenu ? 'is-active' : ''}`}>
+              <div className="level-item navbar-item is-size-1">
                 <NavbarItem page="/" pagename="Home" />
                 <NavbarItem page="/about" pagename="What we do" />
                 <NavbarItem page="/news" pagename="News" />

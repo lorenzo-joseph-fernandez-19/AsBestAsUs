@@ -2,7 +2,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
-import Hero from '../images/asbestos4.jpeg'
+import { DiscussionEmbed } from 'disqus-react'
+
+
 
 export const query = graphql`
   query($slug: String!) {
@@ -27,16 +29,33 @@ const Blog = props => {
     }
   }
 
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: `${props.data.contentfulBlogPost.slug}, ${props.data.contentfulBlogPost.title}` },
+  }
+
   return (
-    <Layout pageTitle={props.data.contentfulBlogPost.title}>
-      <div className="hero-body section">
-        <h1 className="title is-1 has-text-centered">{props.data.contentfulBlogPost.title}</h1>
-          <p className="subtitle is-4 has-text-centered">{props.data.contentfulBlogPost.publishedDate}</p>
-        <div className="container">
-          <img src={Hero}></img>
-          <p>{documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}</p>
+    <Layout pageMeta={{
+      title: `${props.data.contentfulBlogPost.title}`,
+      keywords: ["asbestos removal", "demolitions", "experienced"],
+      description: "Asbestos Removalists and Demolition Specialists with over 25+ years experience."
+    }}>
+      <div className="hero-body is-fullheight background-image">
+        <div className="container center">
+          <article className="media">
+            <div className="media-content">
+              <div className="content">
+                <h1 className="is-size-1 has-text-light">{props.data.contentfulBlogPost.title}</h1>
+                <p className="subtitle is-size-3 has-text-light">{props.data.contentfulBlogPost.publishedDate}</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
+        <div className="box container">
+          <p>{documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}</p>
+          <DiscussionEmbed {...disqusConfig} />
+          </div>
     </Layout>
   )
 }

@@ -12,6 +12,8 @@ $white: #FFFFFF;
 // Update Bulma's global variables
 $family-sans-serif: "Poppins", sans-serif;
 $body-background-color: $white;
+$background: $yellow;
+$warning: $yellow;
 $primary: $yellow;
 $link: $yellow;
 $link-hover: $yellow;
@@ -19,7 +21,8 @@ $widescreen-enabled: false;
 $fullhd-enabled: false;
 $navbar-item-hover-color: $link $yellow;
 $family-primary: $family-sans-serif;
-$warning: $yellow;
+$input-border-color: $yellow;
+$input-color: $black;
 
 .center {
     display: flex;
@@ -38,6 +41,7 @@ $warning: $yellow;
 
 .link:hover {
     color: #FDB813;
+    font-weight: bold;
 }
 
 .line::after {
@@ -68,19 +72,67 @@ $warning: $yellow;
 
 .logo {
     width: 168px;
-    height: 112px;
-    
+    height: 112px;   
 }
 
-.gradient-background {
-    display: flex;
-    // background: linear-gradient(90deg, rgba(253,233,19,0.9682247899159664) 0%, rgba(253,184,19,1) 100%);
+.home-background-image {
+    display: table;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/asbestos5.jpeg") center / cover;
+    background-position: center top;
+    height: 350px;
+    color: white;
 }
 
-.background-image {
-    background-image: url("../images/asbestos5.jpeg");
-    background-size: $fullhd-enabled;
+.about-background-image {
+    display: table;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/asbestos1.jpeg") center / cover;
+    background-position: center top;
+    height: 350px;
+    color: white;
 }
+
+.contact-button {
+    background-color: #FDB813;
+    border: none;
+    border-radius: 20px;
+    color: #FFFFFF;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    size: 40px;
+    font-family: $family-sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.contact-button::after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width .5s
+
+}
+
+.contact-button:hover:after {
+    width: 100%;
+    transition: width .5s;
+}
+
+.contact-button:hover {
+    background-color: rgba(253,184, 19, 0.9);
+    cursor: pointer;
+}
+
+.hr {
+    background-color: #FDB813;
+    height: 0.5rem;
+    width: 5rem;
+}
+
 
 // Import only what you need from Bulma
 @import "../../node_modules/bulma/sass/base/_all.sass";

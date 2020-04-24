@@ -3,7 +3,11 @@ import Layout from '../components/layout'
 
 const Conditions = () => {
     return (
-        <Layout pageTitle="Terms & Conditions">
+        <Layout pageMeta={{
+            title: "Terms & Conditions",
+            keywords: ["asbestos removal", "demolitions", "experienced"],
+            description: "Asbestos Removalists and Demolition Specialists with over 25+ years experience."
+          }}>
             <div className="hero-body is-fullheight has-background-warning">
                 <div className="section">
                     <h2 className="title is-1"><strong>Terms and Conditions</strong></h2>

@@ -6,19 +6,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const ContactPage = () => {
     return (
-        <Layout pageTitle="Contact">
-            <section className="section is-medium has-background-white">
+        <Layout pageMeta={{
+            title: "Contact",
+            keywords: ["asbestos removal", "demolitions", "experienced"],
+            description: "Asbestos Removalists and Demolition Specialists with over 25+ years experience."
+          }}>
+            <section className="section is-medium has-background-warning">
             <div className="container">
                 <div className="columns">
                     <div className="column is-5">
                         <div className="content has-text-black">
                             <h1 className="title is-1">Get in Touch.</h1>
-                            <hr className="has-background-warning"></hr>
+                            <hr className="hr"></hr>
                             <p><span>Feel free to send us a message with any of your queries and we'll get back to you as soon as we can.</span></p>
+                            <a href="mailto:enquiries@asbestasus.com?Subject=Site%20Enquiry" target="_top">enquiries@asbestasus.com</a>
                         </div>
                     </div>
                     <div className="column is-offset-1 is-6">
-            <form name="contact" className="box has-background-warning" method="post" netlify-honeypot="bot-field" data-netlify="true">
+            <form name="contact" className="" method="post" netlify-honeypot="bot-field" data-netlify="true">
                 <input type="hidden" name="bot-field"/>
                 <input type="hidden" name="form-name" value="contact"/>
                 <div className="block">
@@ -40,7 +45,7 @@ const ContactPage = () => {
                     <div className="control has-icons-left has-icons-right">
                         <input className="input" type="email" required/>
                         <span className="icon is-small is-left">
-                            <i className="fas fa-envelope"></i>
+                            <FontAwesomeIcon className="icon is-small" icon="facebook" />
                         </span>
                     </div>
                 </div>
@@ -53,7 +58,7 @@ const ContactPage = () => {
                 </div>
 
                 <div className="field">
-                    <label className="label">Message</label>
+                    <label className="label">Message *</label>
                     <div className="control">
                         <textarea className="textarea" required></textarea>
                     </div>

@@ -21,8 +21,12 @@ const BlogPage = () => {
               }
             `)
     return (
-        <Layout pageTitle="News">
-          <div className="hero-body has-background-warning">
+        <Layout pageMeta={{
+          title: "News",
+          keywords: ["asbestos removal", "demolitions", "experienced"],
+          description: "Asbestos Removalists and Demolition Specialists with over 25+ years experience."
+        }}>
+          <div className="hero-body">
             <div className="container has-text-centered">
                 <h1 className="title is-1">News</h1> 
                 <ol className="tile is-ancestor">{data.allContentfulBlogPost.edges.map((edge) => { 

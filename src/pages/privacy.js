@@ -3,7 +3,11 @@ import Layout from '../components/layout'
 
 const PrivacyPolicy = () => {
     return (
-        <Layout pageTitle="Privacy Policy">
+        <Layout pageMeta={{
+            title: "Privacy Policy",
+            keywords: ["asbestos removal", "demolitions", "experienced"],
+            description: "Asbestos Removalists and Demolition Specialists with over 25+ years experience."
+          }}>
             <div className="hero-body is-fullheight has-background-warning">
                 <div className="section">
                     <h1 className="title is-1">Privacy Policy for AsBestAsUs</h1>
