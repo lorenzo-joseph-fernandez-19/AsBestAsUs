@@ -1,33 +1,50 @@
 @charset "utf-8";
-@import "../../node_modules/bulma/bulma.sass";
 
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
-// Set your brand colors
-$yellow: #FDB813;
-$black: #000000;
-$white: #FFFFFF;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
 
-// Update Bulma's global variables
-$family-sans-serif: "Poppins", sans-serif;
-$body-background-color: $white;
-$background: $yellow;
-$warning: $yellow;
-$primary: $yellow;
-$link: $yellow;
-$link-hover: $yellow;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
-$navbar-item-hover-color: $link $yellow;
-$family-primary: $family-sans-serif;
-$input-border-color: $yellow;
-$input-color: $black;
+li {
+ list-style: none;
+}
+
+.links {
+  color: #FDB813; 
+  text-decoration: none;
+}
+
+.links:hover {
+  color: rgba($color: #FDB813, $alpha: 0.5); 
+}
+
+.white {
+  color: white;
+}
+
+.copyright {
+ color: white;
+ padding-top: 30px;
+}
+
+.footer-background {
+ background-color: #363636;
+ border-left: 20px solid #FDB813;
+ padding-left: 40px;
+}
+
+.footer-border {
+    border: 2px #FDB813 solid
+}
 
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .link {
@@ -75,57 +92,6 @@ $input-color: $black;
     height: 112px;   
 }
 
-.home-background-image {
-    display: table;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/asbestos5.jpeg") center / cover;
-    background-position: center top;
-    height: 350px;
-    color: white;
-}
-
-.about-background-image {
-    display: table;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/asbestos1.jpeg") center / cover;
-    background-position: center top;
-    height: 350px;
-    color: white;
-}
-
-.contact-button {
-    background-color: #FDB813;
-    border: none;
-    border-radius: 20px;
-    color: #FFFFFF;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    size: 40px;
-    font-family: $family-sans-serif;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.contact-button::after {
-    content: " ";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #FFFFFF;
-    transition: width .5s
-
-}
-
-.contact-button:hover:after {
-    width: 100%;
-    transition: width .5s;
-}
-
-.contact-button:hover {
-    background-color: rgba(253,184, 19, 0.9);
-    cursor: pointer;
-}
 
 .hr {
     background-color: #FDB813;
@@ -133,12 +99,3 @@ $input-color: $black;
     width: 5rem;
 }
 
-
-// Import only what you need from Bulma
-@import "../../node_modules/bulma/sass/base/_all.sass";
-@import "../../node_modules/bulma/sass/components/_all.sass";
-@import "../../node_modules/bulma/sass/elements/_all.sass";
-@import "../../node_modules/bulma/sass/form/_all.sass";
-@import "../../node_modules/bulma/sass/grid/_all.sass";
-@import "../../node_modules/bulma/sass/layout/_all.sass";
-@import "../../node_modules/bulma/sass/utilities/_all.sass";

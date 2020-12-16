@@ -38,7 +38,6 @@ export default class Header extends React.Component {
           <div className="">
             <div className={`navbar-menu ${this.state.activeMenu ? 'is-active' : ''}`}>
               <div className="level-item navbar-item is-size-1">
-                <NavbarItem page="/" pagename="Home" />
                 <NavbarItem page="/about" pagename="What we do" />
                 <NavbarItem page="/news" pagename="News" />
                 <NavbarItem page="/contact" pagename="Contact Us"/>

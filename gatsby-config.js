@@ -37,5 +37,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-transition-link`,
   ],
 }
