@@ -37,7 +37,7 @@ const BlogPage = () => {
                         <div class="card">
                           <div class="card-image">
                             <figure class="image is-4by3">
-                              <img src={Hero} alt={edge.node.title}/>
+                              <img alt={edge.node.title}/>
                             </figure>
                           </div>
                           <div class="card-content">

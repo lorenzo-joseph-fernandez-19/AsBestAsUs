@@ -9,7 +9,7 @@ const AboutPage = () => {
             keywords: ["asbestos removal", "demolitions", "experienced"],
             description: "Asbestos Removalists and Demolition Specialists with over 25+ years experience."
           }}>
-           <section className="">
+           <section className="page-width">
            </section>   
         </Layout>
     )

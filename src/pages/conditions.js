@@ -8,9 +8,9 @@ const Conditions = () => {
             keywords: ["asbestos removal", "demolitions", "experienced"],
             description: "Asbestos Removalists and Demolition Specialists with over 25+ years experience."
           }}>
-            <div className="hero-body is-fullheight has-background-warning">
+            <div className="page-width">
                 <div className="section">
-                    <h2 className="title is-1"><strong>Terms and Conditions</strong></h2>
+                    <h2 className=""><strong>Terms and Conditions</strong></h2>
                         <p>Welcome to AsBestAsUs!</p>
                         <p>These terms and conditions outline the rules and regulations for the use of AsBestAsUs's Website, located at www.asbestasus.com.</p>
                         <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use AsBestAsUs if you do not agree to take all of the terms and conditions stated on this page. Our Terms and Conditions were created with the help of the <a href="https://www.privacypolicyonline.com/terms-conditions-generator/">Terms & Conditions Generator Online</a> and the <a href="https://www.termsconditionsgenerator.com">Free Terms & Conditions Generator</a>.</p>

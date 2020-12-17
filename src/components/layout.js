@@ -7,7 +7,7 @@ import "../styles/mystyles.scss"
 const Layout = ({ pageMeta, children }) => (
     <>
       <Helmet>
-        <title>{`AsBestAsUs - Asbestos Removalists and Demolition Specialists | ${pageMeta.title}`}</title>
+        <title>{`AsBestAsUs | ${pageMeta.title}`}</title>
       
       {/* The charset, viewport and author meta tags will always have the same value, so we hard code them! */}
       <meta charset="UTF-8" />

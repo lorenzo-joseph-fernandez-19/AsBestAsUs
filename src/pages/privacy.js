@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
             keywords: ["asbestos removal", "demolitions", "experienced"],
             description: "Asbestos Removalists and Demolition Specialists with over 25+ years experience."
           }}>
-            <div className="hero-body is-fullheight has-background-warning">
+            <div className="page-width">
                 <div className="section">
                     <h1 className="title is-1">Privacy Policy for AsBestAsUs</h1>
                         <p>At AsBestAsUs, accessible from www.asbestasus.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by AsBestAsUs and how we use it.</p>
