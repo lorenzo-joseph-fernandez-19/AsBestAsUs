@@ -18,10 +18,8 @@ const Layout = ({ pageMeta, children }) => (
       <meta name="description" content={pageMeta.description} />
       {/* We pass an array of keywords, and then we use the Array.join method to convert them to a string where each keyword is separated by a comma */}
       <meta name="keywords" content={pageMeta.keywords.join(',')} />
-      {/* <!-- ManyChat --> */}
-      <script src="//widget.manychat.com/235113253826597.js" async="async"></script>
       </Helmet>
-      <div className="is-family-primary">
+      <div>
         <Header />
         {children}
         <Footer />

@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import Hero from '../images/asbestos2.jpeg'
 
 const BlogPage = () => {
     const data = useStaticQuery(graphql`

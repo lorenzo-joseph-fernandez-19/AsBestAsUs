@@ -15,7 +15,7 @@ const Footer = () => {
                     <AniLink cover direction="left" bg="#FDB813" duration={1} className="links" to="/conditions">Terms & Conditions</AniLink>
                 </li> 
             </div> 
-            <ul className="social-border">
+            <ul className="social-border ">
                 <li className="icon-center">
                     <OutboundLink href="https://www.linkedin.com" rel="noreferrer noopener" target="_blank">
                     <FontAwesomeIcon className="icon" icon={['fab', 'linkedin-in']} />

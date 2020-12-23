@@ -1,51 +1,23 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import logo from '../images/Logo.svg'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import '../components/fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
-const NavbarItem = props => (
-  <Link className="link line" activeClassName="active-list" to={props.page}>
-    {props.pagename}
-  </Link>
-)
-
-const NavbarBurger = props => (
-  <div onClick={props.toggleMenu} className={`navbar-burger burger ${props.active ? 'is-active' : ''}`}>
-    <span />
-    <span />
-    <span />
-  </div>
-)
-
-export default class Header extends React.Component {
-  state = {
-    activeMenu: false,
-  }
-  toggleMenu = () => {
-    this.setState({
-      activeMenu: !this.state.activeMenu,
-    })
-  }
-  render() {
+const Header = () => {
     return (
-      <section className="hero section">
-        <nav className="level-left">
-            <Link className to="/">
-              <img className="logo level-item" src={logo} alt="AsBestAsUs Logo"/>
-            </Link>
-            <NavbarBurger active={this.state.activeMenu} toggleMenu={this.toggleMenu}/>
-
-          <div className="">
-            <div className={`navbar-menu ${this.state.activeMenu ? 'is-active' : ''}`}>
-              <div className="level-item navbar-item is-size-1">
-                <NavbarItem page="/about" pagename="What we do" />
-                <NavbarItem page="/news" pagename="News" />
-                <NavbarItem page="/contact" pagename="Contact Us"/>
-              </div>
-            </div>
-          </div>
+      <nav className="index-grid">
+        <AniLink cover direction="bottom" bg="#FDB813" duration={1} className="header" to="/"><img src={logo} width="50%" /></AniLink>
+        <ul className="header-menu header">
+          <li className="header-link"><Link activeClassName="active-link" className="link" to="/about">What We Do</Link></li>
+          <li className="header-link"><Link activeClassName="active-link" className="link" to="/news">News</Link></li>
+          <li className="header-link"><Link activeClassName="active-link" className="header-contact" to="/contact">Contact Us</Link></li>
+          <li className="header-link"><OutboundLink className="header-contact" href="tel:+64210549784" rel="noreferrer noopener"><FontAwesomeIcon className="icon" icon={['fab', 'fa-phone']} />021 054 9784</OutboundLink></li>
+        </ul>
         </nav>
-      </section>
     )
   } 
-}
+
+export default Header
