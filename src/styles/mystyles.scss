@@ -15,12 +15,19 @@ li {
  list-style: none;
 }
 
+/* Header css */
+
+.header-icon {
+    margin-right: 10px;
+}
 
 .header-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    width: 100%;
+    justify-content: center;
 }
 
 .header-link {
@@ -30,18 +37,20 @@ li {
 
 .header-contact {
     background-color: #FDB813;
-    padding: 10px 40px;
+    border-radius: 5px;
+    padding: 20px;
     color: #000000;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     font-size: 1.2rem;
+    box-shadow: 0 10px 6px -6px rgba($color: #FDB813, $alpha: 0.5);
 }
-
 
 .header {
     margin: 30px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
   /* */
@@ -55,7 +64,7 @@ li {
 }
 
 .active-link {
-    border-bottom: 2px dashed #FDB813;
+    border-bottom: 4px solid #FDB813;
     width: 100px; 
 }
 
@@ -68,10 +77,12 @@ li {
 }
 
 .link:hover {
-    color: #FDB813;
-    font-weight: bold;
-    transform: translate(20px);
+ background-color: #FDB813; 
+ border-radius: 5px;
+ padding: 20px;   
+ box-shadow: 0 10px 6px -6px rgba($color: #FDB813, $alpha: 0.5);
 }
+
 
 .list {
     display: flex;
@@ -95,6 +106,12 @@ li {
     display: inline-block;
     text-transform: uppercase;
     font-weight: 600;
+    width: 78%;
+}
+
+.button:hover {
+    cursor: pointer;
+    
 }
 
 /* Index css  */
@@ -114,7 +131,9 @@ li {
 }
 
 .dotted-line {
-    border: 2px dashed #FDB813;
+    background: #FDB813;
+    border: none;
+    height: 4px;
     width: 25%;
     margin-top: 50px;
 }
@@ -124,7 +143,10 @@ li {
     color: #FDB813;
     font-weight: bolder;
     font-size: 2em;
+}
 
+.img-container {
+  max-width: 100%;
 }
 
 /* Index mobile css  */
@@ -212,14 +234,14 @@ li {
            padding-left: 0px;
            border: none;
            border-bottom: 2px solid #FDB813; 
-           width: 100%;   
+           width: 90%;   
            height: 50px;
            }
        }
     .icon-center {
         display: inline-block;
         margin-top: 0px;
-        margin-right: 20px;
+        margin-right: 30px;
     }
 }
 
@@ -234,7 +256,7 @@ li {
     border: 2px solid #FDB813;
     padding: 10px;
     margin-bottom: 10px;
-    width: 80%;
+    width: 500px;
     text-align: left;
 }
 
@@ -264,5 +286,8 @@ li {
 @media only screen and (max-width: 650px) {
     .contact-grid {
         grid-template-columns: auto;
+    }
+    .input{
+        width: 100%;
     }
 }
