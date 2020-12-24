@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Header = () => {
     return (
-      <nav className="index-grid header-border">
+      <nav className="header-grid header-border">
         <AniLink cover direction="bottom" bg="#FDB813" duration={1} className="header" to="/"><img src={logo} width="200px" /></AniLink>
         <ul className="header-menu header">
           <li className="header-link"><Link activeClassName="active-link" className="link" to="/about">What We Do</Link></li>

@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from '../components/layout'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Conditions = () => {
     return (
@@ -8,11 +9,11 @@ const Conditions = () => {
             keywords: ["asbestos removal", "demolitions", "experienced"],
             description: "Asbestos Removalists and Demolition Specialists with over 25+ years experience."
           }}>
-            <div className="page-width">
+            <div className="conditions-page-width">
                     <h2 className="title"><strong>Terms and Conditions</strong></h2>
                         <p>Welcome to AsBestAsUs!</p>
                         <p>These terms and conditions outline the rules and regulations for the use of AsBestAsUs's Website, located at www.asbestasus.com.</p>
-                        <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use AsBestAsUs if you do not agree to take all of the terms and conditions stated on this page. Our Terms and Conditions were created with the help of the <a href="https://www.privacypolicyonline.com/terms-conditions-generator/">Terms & Conditions Generator Online</a> and the <a href="https://www.termsconditionsgenerator.com">Free Terms & Conditions Generator</a>.</p>
+                        <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use AsBestAsUs if you do not agree to take all of the terms and conditions stated on this page. Our Terms and Conditions were created with the help of the <OutboundLink className="links" href="https://www.privacypolicyonline.com/terms-conditions-generator/" rel="noreferrer noopener" target="_blank">Terms & Conditions Generator Online</OutboundLink> and the <OutboundLink className="links" href="https://www.termsconditionsgenerator.com" rel="noreferrer noopener" target="_blank">Free Terms & Conditions Generator</OutboundLink>.</p>
                         <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
 
                     <h3 className="title"><strong>Cookies</strong></h3>
@@ -42,7 +43,7 @@ const Conditions = () => {
 
                     <h3 className="title"><strong>Hyperlinking to our Content</strong></h3>
                         <p>The following organizations may link to our Website without prior written approval:</p>
-                        <ul>
+                        <ul className="">
                             <li>Government agencies;</li>
                             <li>Search engines;</li>
                             <li>News organizations;</li>
